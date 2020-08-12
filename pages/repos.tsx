@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { NextPage } from 'next';
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -8,15 +9,21 @@ import withAnalytics from '../src/hocs/withAnalytics';
 
 import { Container, Title } from '../src/pages/Repos/styles';
 
-const Repos = ({ repos }) => (
+interface ReposProps {
+  repos: {
+    name: string;
+  },
+}
+
+const Repos: NextPage<ReposProps> = ({ repos }) => (
   <Container>
-    <Head>
+    <Head> 
       <title>Repositórios de Gustavo Harff</title>
     </Head>
     <Title>Repositórios</Title>
     <ul>
-      {repos.map(repos => (
-        <li key={repos.id}>{repos.name}</li>
+      {repos.map((repo) => (
+        <li key={repo.id}>{repo.name}</li>
       ))}
     </ul>
     <Link href="/">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NextPage } from 'next'
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -7,7 +8,7 @@ import withAnalytics from '../src/hocs/withAnalytics';
 
 import { Container, Title } from '../src/pages/Home/styles';
 
-const Home = () => (
+const Home: NextPage = () => (
   <Container>
     <Head>
       <title>Home</title>

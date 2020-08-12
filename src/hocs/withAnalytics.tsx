@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 import ReactGA from 'react-ga';
 
-const withAnalytics = () => Composed => 
+const withAnalytics = () => Composed => (
   class extends Component {
     static getInitialProps(ctx) {
       return loadGetInitialProps(Composed, ctx)
@@ -17,5 +17,6 @@ const withAnalytics = () => Composed =>
       return <Composed {...this.props} />
     }
   }
+)
 
-  export default withAnalytics
+export default withAnalytics
