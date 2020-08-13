@@ -1,4 +1,4 @@
-import '../src/styles/global.css'
+import GlobalStyle from '../src/styles/global'
 
 interface MyAppProps{
   Component: React.FC;
@@ -6,5 +6,10 @@ interface MyAppProps{
 }
 
 export default function MyApp({ Component, pageProps }: MyAppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  )
 }
