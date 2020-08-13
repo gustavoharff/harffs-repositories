@@ -15,7 +15,7 @@ const Home: NextPage = () => (
     </Head>
     <img src="/static/logo.png" />
     <Link href="/repos">
-      <Title>Meus repositórios no GitHub</Title>
+      <Title>My repositories on GitHub</Title>
     </Link>
   </Container>
 )
