@@ -6,17 +6,20 @@ import Head from 'next/head';
 
 import withAnalytics from '../src/hocs/withAnalytics';
 
-import { Container, Title } from '../src/pages/Home/styles';
+import { Container, Content, Title, Button } from '../src/pages/Home/styles';
 
 const Home: NextPage = () => (
   <Container>
     <Head>
-      <title>Home</title>
+      <title>My repositories</title>
     </Head>
-    <img src="/static/logo.png" />
-    <Link href="/repos">
-      <Title>My repositories on GitHub</Title>
-    </Link>
+    <Content>
+      <Title>My repositories</Title>
+      <img src="/static/logo.png" />
+      <Link href="/repos">
+        <Button>Go to my repositories</Button>
+      </Link>
+    </Content>
   </Container>
 )
 

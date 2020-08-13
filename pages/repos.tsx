@@ -7,11 +7,13 @@ import Head from 'next/head';
 
 import withAnalytics from '../src/hocs/withAnalytics';
 
-import { Container, Title, Back } from '../src/pages/Repos/styles';
+
+import { Container, Content, Title, Button } from '../src/pages/Repos/styles';
 
 interface Repo {
   id: number;
-  name: string;
+  full_name: string;
+  description: string;
   map: Function;
 }
 
@@ -24,17 +26,23 @@ const Repos: NextPage<ReposProps> = ({ repos }) => (
     <Head> 
       <title>Repositórios de Gustavo Harff</title>
     </Head>
-    <Title>Repositories</Title>
-    <ul>
-      {repos && repos.map((repo: Repo) => (
-        <a target="_blank" href={`https://github.com/gustavoharff/${repo.name}`}>
-          <li key={repo.id}>{repo.name}</li>
-        </a>
-      ))}
-    </ul>
-    <Link href="/">
-      <Back>Go back</Back>
-    </Link>
+    <Content>
+      <Title>Repositories</Title>
+      <ul>
+        {repos && repos.map((repo: Repo) => (
+          <a key={repo.id} target="_blank" href={`https://github.com/gustavoharff/${repo.name}`}>
+            <li>
+              <strong>{repo.full_name}</strong>
+              <p>{repo.description}</p>
+              <p>TypeScript</p>
+            </li>
+          </a>
+        ))}
+      </ul>
+      <Link href="/">
+        <Button>Go back</Button>
+      </Link>
+    </Content>
   </Container>
 )
 
