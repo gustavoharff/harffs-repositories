@@ -23,7 +23,7 @@ export default class MyDocument extends Document<Props>  {
         <Head>
           {this.props.styleTags}
         </Head>
-        <body>
+        <body style={{margin: 0}}>
           <Main />
           <NextScript />
         </body>
