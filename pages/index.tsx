@@ -17,7 +17,6 @@ const Home: NextPage = () => (
     <Link href="/repos">
       <Title>Meus repositórios no GitHub</Title>
     </Link>
-    
   </Container>
 )
 

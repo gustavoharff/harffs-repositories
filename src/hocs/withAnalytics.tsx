@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+import { loadGetInitialProps, DocumentContext } from 'next/dist/next-server/lib/utils';
 import ReactGA from 'react-ga';
 
-const withAnalytics = () => Composed => (
+const withAnalytics = () => (Composed: React.FC) => (
   class extends Component {
-    static getInitialProps(ctx) {
+    static getInitialProps(ctx: DocumentContext) {
       return loadGetInitialProps(Composed, ctx)
     }
 

@@ -9,10 +9,14 @@ import withAnalytics from '../src/hocs/withAnalytics';
 
 import { Container, Title } from '../src/pages/Repos/styles';
 
+interface Repo {
+  id: number;
+  name: string;
+  map: Function;
+}
+
 interface ReposProps {
-  repos: {
-    name: string;
-  },
+  repos?: Repo;
 }
 
 const Repos: NextPage<ReposProps> = ({ repos }) => (
@@ -22,7 +26,7 @@ const Repos: NextPage<ReposProps> = ({ repos }) => (
     </Head>
     <Title>Repositórios</Title>
     <ul>
-      {repos.map((repo) => (
+      {repos && repos.map((repo: Repo) => (
         <li key={repo.id}>{repo.name}</li>
       ))}
     </ul>
