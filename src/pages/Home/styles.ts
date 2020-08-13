@@ -9,7 +9,6 @@ export const Container = styled.div`
   flex-direction: column;
   background: #191622;
   color: rgb(151, 151, 151);
-  font-family: sans-serif;
 
   img {
     width: 400px;
