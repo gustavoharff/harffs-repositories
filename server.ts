@@ -1,6 +1,6 @@
-const { createServer } = require('http');
-const next = require('next');
-const routes = require('./routes');
+import { createServer } from 'http';
+import next from 'next';
+import routes from './routes';
 
 const app = next({ dev: process.env.NODE_ENV !== 'production' });
 
