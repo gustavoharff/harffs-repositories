@@ -12,8 +12,10 @@ import { Container, Content, Title, Button } from '../src/pages/Repos/styles';
 
 interface Repo {
   id: number;
+  name: string;
   full_name: string;
   description: string;
+  language: string;
   map: Function;
 }
 
@@ -34,7 +36,7 @@ const Repos: NextPage<ReposProps> = ({ repos }) => (
             <li>
               <strong>{repo.full_name}</strong>
               <p>{repo.description}</p>
-              <p>TypeScript</p>
+              <p>{repo.language}</p>
             </li>
           </a>
         ))}
