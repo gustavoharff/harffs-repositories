@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { darken } from 'polished';
+import styled from 'styled-components'
+import { darken } from 'polished'
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
     width: 350px;
     height: 350px;
   }
-`;
+`
 
 export const Content = styled.div`
   height: 100%;
@@ -22,12 +22,12 @@ export const Content = styled.div`
   text-align: center;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const Title = styled.h1`
   font-weight: normal;
   font-size: 36px;
-`;
+`
 
 export const Button = styled.a`
   display: flex;
@@ -50,4 +50,4 @@ export const Button = styled.a`
     border-color: ${props => props.theme.colors.primaryGreenHover};
     color: ${darken(0.1, '#fff')};
   }
-`;
+`

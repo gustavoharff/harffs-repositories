@@ -1,4 +1,4 @@
-import { darken } from 'polished';
+import { darken } from 'polished'
 
 const theme = {
   colors: {
@@ -7,7 +7,7 @@ const theme = {
     primaryGreen: '#2CB436',
     primaryGreenHover: darken(0.2, '#2CB436'),
     secondaryGreen: '#28741A',
-    secondaryGreenHover: darken(0.2, '#28741A'),
+    secondaryGreenHover: darken(0.2, '#28741A')
   }
 }
 

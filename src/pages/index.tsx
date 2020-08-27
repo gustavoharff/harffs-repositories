@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { NextPage } from 'next'
 
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link'
+import Head from 'next/head'
 
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.png'
 
-import withAnalytics from '../hocs/withAnalytics';
+import withAnalytics from '../hocs/withAnalytics'
 
-import { Container, Content, Title, Button } from '../styles/pages/home';
+import { Container, Content, Title, Button } from '../styles/pages/home'
 
 const Home: NextPage = () => (
   <Container>
@@ -25,4 +25,4 @@ const Home: NextPage = () => (
   </Container>
 )
 
-export default withAnalytics()(Home);
+export default withAnalytics()(Home)
