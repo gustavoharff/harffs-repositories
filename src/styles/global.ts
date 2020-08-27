@@ -18,10 +18,11 @@ const Globalstyle = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
-    background: rgb(18, 18, 18);
+    background: ${props => props.theme.colors.background};
   }
 
   body, input, button {
+    color: ${props => props.theme.colors.text};
     font-size: 16px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
   }

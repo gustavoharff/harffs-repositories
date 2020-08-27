@@ -30,16 +30,16 @@ export const Content = styled.div`
     border: 2px solid #717171;
     border-radius: 10px;
     display: flex;
+    color: ${props => props.theme.colors.text};
     flex-direction: column;
-    color: #D3D3D3;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     transition: 0.2s;
 
     &:hover {
-      background: ${darken(0.2, '#28741A')};
-      border-color: ${darken(0.2, '#2CB436')};
+      background: ${props => props.theme.colors.secondaryGreenHover};
+      border-color: ${props => props.theme.colors.primaryGreenHover};
     }
 
     strong {
@@ -54,7 +54,6 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   margin-top: 30px;
-  color: rgb(211, 211, 211);
   font-weight: normal;
   font-size: 36px;
 `;
@@ -64,8 +63,8 @@ export const Button = styled.a`
   flex-direction: column;
   min-height: 60px;
   width: 250px;
-  background: #2CB436;
-  border: 2px solid #28741A;
+  background: ${props => props.theme.colors.primaryGreen};
+  border: 2px solid ${props => props.theme.colors.secondaryGreen};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -77,8 +76,8 @@ export const Button = styled.a`
   margin-bottom: 30px;
 
   &:hover {
-    background: ${darken(0.1, '#28741A')};
-    border-color: ${darken(0.2, '#2CB436')};
+    background: ${props => props.theme.colors.secondaryGreenHover};
+    border-color: ${props => props.theme.colors.primaryGreenHover};
     color: ${darken(0.1, '#fff')};
   }
 `;

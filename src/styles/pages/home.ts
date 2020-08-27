@@ -25,7 +25,6 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: rgb(211, 211, 211);
   font-weight: normal;
   font-size: 36px;
 `;
@@ -35,8 +34,8 @@ export const Button = styled.a`
   flex-direction: column;
   height: 60px;
   width: 250px;
-  background: #2CB436;
-  border: 2px solid #28741A;
+  background: ${props => props.theme.colors.primaryGreen};
+  border: 2px solid ${props => props.theme.colors.secondaryGreen};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -47,8 +46,8 @@ export const Button = styled.a`
   font-size: 16px;
 
   &:hover {
-    background: ${darken(0.1, '#28741A')};
-    border-color: ${darken(0.2, '#2CB436')};
+    background: ${props => props.theme.colors.secondaryGreenHover};
+    border-color: ${props => props.theme.colors.primaryGreenHover};
     color: ${darken(0.1, '#fff')};
   }
 `;
