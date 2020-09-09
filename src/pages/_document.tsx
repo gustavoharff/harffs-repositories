@@ -42,6 +42,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="google-site-verification" content="thq_vbaMdycR9er6NhnF89CViXTtS1eSc-bcR4o0CNI" />
           <link
             rel="shortcut icon"
             href="https://github.com/favicon.ico"
