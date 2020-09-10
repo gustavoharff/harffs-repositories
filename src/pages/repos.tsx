@@ -25,6 +25,8 @@ const Repos: NextPage<IReposProps> = ({ repos }) => {
   return (
     <Container>
       <Head>
+      <meta name="description" content="Meus repositórios armazenados no GitHub." />
+        <meta property="og:title" content="Repositórios de Gustavo Harff" key="title" />
         <title>Repositórios de Gustavo Harff</title>
       </Head>
       <Content>
