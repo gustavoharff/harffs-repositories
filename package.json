@@ -10,7 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "next": "^9.5.4",
     "next-images": "^1.4.1",
     "polished": "^3.6.5",
